@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--index view added for Home View's startup page -->
+<h1>API Consumption DEMO</h1>
+
+
+<h2>List of Resources Used</h2>
+<ul>
+    <li>IDE: Visual Studio Community Edition 2017</li>
+    <li>http://svc.metrotransit.org/nextrip/help</li>
+    <li>Stack Overflow</li>
+    <li>jQuery Documentation</li>
+    <li>Learn API Documentation with JSON and XML (video by Peter Gruenbaum)</li>
+    <li>Weather API Consumption Tutorial in C#/ASP.NET MVC Framework (video by Mel McGee)</li>
+    <li>Inspected Greater Cleveland Regional Transit Authority NextConnect website: http://www.nextconnect.riderta.com/livedeparturetimes </li>
+</ul>
+
+<h2>Problems Encountered</h2>
+<ul>
+    <li>Parsing JSON into human readable text to render onto browser page</li>
+    <li>Configuring IIS Manager</li>
+</ul>
+
+<h2>Other Problem Solving Methods Attempted</h2>
+
+<ul>
+    <li>Briefly switched to developing using Python 3.6.2 and PyCharm.</li>
+    <li>Quickly used xampp local server to test api call code</li>
+</ul>
+
+<h2>Successes</h2>
+<ul>
+    <li>Got data from an API</li>
+    <li>Obtained a better understanding of JSON, AJAX and XML</li>
+</ul>
+
+<h2>Testing</h2>
+<li>Used "console.log" statement to test code</li>
+<li>Made incremental changes, saved them, then ran code in Google Chrome and/or IE browser</li>
+<li>Version Control - GitHub</li>
+
+<h1>Strategy to Solve Problem</h1>
+
+<p>Using jQuery, JSON, AJAX and C#:
+<br /> get all bus routes
+<br /> get all bus stops
+<br /> get all bus directions
+<br /> Parse arrays returned from API into strings
+<br /> get Route number from Bus Routes api. Ex: 218: {Description: "921 - A Line Roseville-St Paul-Minneapolis", ProviderID: "8", Route: "921"}, Route number is 921
+<br /> Then get bus stops that correspond to the Bus Route number
+<br /> Then get bus direction (north, east, south, west) </p>

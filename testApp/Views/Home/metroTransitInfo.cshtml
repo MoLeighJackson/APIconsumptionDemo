@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "metroTransitInfo";
+}
+
+
+<h1>Metro Transit API Consumption Demo</h1>
+
+<h2>Click the button then open the console to view the data</h2>
+<p id="reply"></p>
+
+<button id="route">Bus Route</button>
+<button id="dir">Direction</button>
+<button id="stop">Stop</button>
+
+<script>
+
+   
+    $(document).ready(function () {
+        $("#dir").click(function () {
+
+
+            $(function () {
+                $.getJSON('http://svc.metrotransit.org/NexTrip/Directions/Routes', function (data) {
+
+                    // unsuccesful attempt to parse object array data
+                    var json = JSON.parse(JSON.stringify(data));
+
+                    console.log(json)
+                   
+
+                });
+            });
+        });
+
+    });
+
+    
+    $(document).ready(function () {
+        $("#route").click(function () {
+                    $(function () {
+                        $.getJSON('http://svc.metrotransit.org/NexTrip/Routes', function (data) {
+
+                            $("#reply").text("Data format for json object array from API:  " + data.entries());
+
+                            console.log(data);
+                        });
+                    });
+                });
+    });
+
+    $(document).ready(function () {
+        $("#stop").click(function () {
+
+
+            $(function () {
+                $.getJSON('http://svc.metrotransit.org/NexTrip/Directions/Stops', function (data) {
+
+                    $("#reply").text(data);
+
+                    console.log(data);
+                });
+            });
+        });
+    });
+
+
+
+
+</script>

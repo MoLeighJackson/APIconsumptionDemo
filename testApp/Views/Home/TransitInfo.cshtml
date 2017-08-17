@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "TransitInfo";
+}
+
+<h2>MVC Scaffolding Demo for API</h2>
+
+<p>Click the button below and open the console to view the data</p>
+<button>Bus Route</button>
+
+<script>
+  //json
+    $(document).ready(function () {
+        $("button").click(function () {
+
+            //      //ajax request
+            //1st parameter is url for api
+
+
+            $(function () {
+                $.getJSON("@Url.Action("GetTransitInfo", "Home")", function (data) {
+
+                 
+
+
+                    console.log(data);
+                });
+            });
+        });
+    });
+</script>
